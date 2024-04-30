@@ -1,0 +1,111 @@
+{
+    "enchantment.ensorcellation.air_affinity": "Affinité de l’air",
+    "enchantment.ensorcellation.air_affinity.desc": "Supprime la pénalité de vitesse de minage lorsque vous n’êtes pas au sol.",
+  
+    "enchantment.ensorcellation.angler": "Prime du pêcheur",
+    "enchantment.ensorcellation.angler.desc": "Donne une chance d’attraper des objets supplémentaires lors de la pêche.",
+  
+    "enchantment.ensorcellation.bulwark": "Rempart",
+    "enchantment.ensorcellation.bulwark.desc": "Empêche le porteur d’être repoussé et peut désactiver l’arme d’un attaquant.",
+  
+    "enchantment.ensorcellation.cavalier": "Cavalier",
+    "enchantment.ensorcellation.cavalier.desc": "Augmente les dégâts lorsque vous chevauchez quelque chose.",
+  
+    "enchantment.ensorcellation.curse_fool": "Malédiction de la folie",
+    "enchantment.ensorcellation.curse_fool.desc": "Empêche le gain d’expérience lors de l’utilisation de l’objet.",
+  
+    "enchantment.ensorcellation.curse_mercy": "Malédiction de la miséricorde",
+    "enchantment.ensorcellation.curse_mercy.desc": "Empêche une arme d’infliger un coup mortel.",
+  
+    "enchantment.ensorcellation.damage_ender": "Perturbation d’Ender",
+    "enchantment.ensorcellation.damage_ender.desc": "Augmente les dégâts infligés aux monstres de l’Ender et inhibe la téléportation.",
+  
+    "enchantment.ensorcellation.damage_illager": "Justicier",
+    "enchantment.ensorcellation.damage_illager.desc": "Augmente les dégâts infligés aux monstres illageois.",
+  
+    "enchantment.ensorcellation.damage_villager": "Hors-la-loi",
+    "enchantment.ensorcellation.damage_villager.desc": "Augmente les dégâts infligés aux monstres villageois.",
+  
+    "enchantment.ensorcellation.displacement": "Déplacement",
+    "enchantment.ensorcellation.displacement.desc": "Téléporte aléatoirement les attaquants.",
+  
+    "enchantment.ensorcellation.excavating": "Excavation",
+    "enchantment.ensorcellation.excavating.desc": "Récolte des blocs supplémentaires dans un rayon.",
+  
+    "enchantment.ensorcellation.xp_boost": "Perspicacité",
+    "enchantment.ensorcellation.xp_boost.desc": "Augmente le gain d’expérience lors de l’utilisation de l’objet.",
+  
+    "enchantment.ensorcellation.fire_rebuke": "Réprimande enflammée",
+    "enchantment.ensorcellation.fire_rebuke.desc": "Enflamme les attaquants tout en les repoussant.",
+
+    "enchantment.ensorcellation.frost_aspect": "Aspect givré",
+    "enchantment.ensorcellation.frost_aspect.desc": "Ralentit et affaiblit la cible.",
+
+    "enchantment.ensorcellation.frost_rebuke": "Réprimande glaçante",
+    "enchantment.ensorcellation.frost_rebuke.desc": "Ralentit et affaiblit les attaquants tout en les repoussant.",
+
+    "enchantment.ensorcellation.frost_walker": "Marcheur de givre",
+    "enchantment.ensorcellation.frost_walker.desc": "Gele les eaux de surface et la lave, ce qui permet leur traversée.",
+
+    "enchantment.ensorcellation.furrowing": "Sillonnage",
+    "enchantment.ensorcellation.furrowing.desc": "Laboure des blocs supplémentaires sur une ligne.",
+
+    "enchantment.ensorcellation.gourmand": "Gourmand",
+    "enchantment.ensorcellation.gourmand.desc": "Les aliments sont plus nourrissants et rassasiants lorsqu’ils sont consommés.",
+
+    "enchantment.ensorcellation.hunter": "Prime du chasseur",
+    "enchantment.ensorcellation.hunter.desc": "Donne une chance d’obtenir des butins supplémentaires de la part d’animaux tués.",
+
+    "enchantment.ensorcellation.instigating": "Incitation",
+    "enchantment.ensorcellation.instigating.desc": "Inflige des dégâts supplémentaires si la cible est au maximum de ses points de vie.",
+
+    "enchantment.ensorcellation.leech": "Sangsue",
+    "enchantment.ensorcellation.leech.desc": "Restaure la santé lorsqu’un monstre est tué.",
+
+    "enchantment.ensorcellation.magic_edge": "Bord magique",
+    "enchantment.ensorcellation.magic_edge.desc": "Augmente légèrement les dégâts infligés et les convertit en magie.",
+
+    "enchantment.ensorcellation.magic_protection": "Protection magique",
+    "enchantment.ensorcellation.magic_protection.desc": "Réduit les dégâts subis par les sources magiques.",
+
+    "enchantment.ensorcellation.phalanx": "Phalange",
+    "enchantment.ensorcellation.phalanx.desc": "Permet au porteur de se déplacer plus rapidement lors de l’utilisation d’un bouclier.",
+
+    "enchantment.ensorcellation.pilfering": "Chapardage",
+    "enchantment.ensorcellation.pilfering.desc": "Peut voler une pièce d’armure sur des cibles accrochées.",
+
+    "enchantment.ensorcellation.preservation": "Préservation",
+    "enchantment.ensorcellation.preservation.desc": "Supprime l’augmentation du coût en XP pour la réparation d’un objet.",
+
+    "enchantment.ensorcellation.quick_draw": "Dégaine rapide",
+    "enchantment.ensorcellation.quick_draw.desc": "Diminue le temps nécessaire pour dégainer complètement un arc.",
+
+    "enchantment.ensorcellation.reach": "Atteindre",
+    "enchantment.ensorcellation.reach.desc": "Augmente la distance à laquelle le porteur peut interagir avec les blocs.",
+
+    "enchantment.ensorcellation.smashing": "Fracassant",
+    "enchantment.ensorcellation.smashing.desc": "Les minerais récoltés seront réduits en morceaux, ce qui améliorera le rendement.",
+
+    "enchantment.ensorcellation.smelting": "Fonderie",
+    "enchantment.ensorcellation.smelting.desc": "Les blocs récoltés seront automatiquement fondus, comme s’ils étaient cuits par un four.",
+
+    "enchantment.ensorcellation.soulbound": "Lié à l’âme",
+    "enchantment.ensorcellation.soulbound.desc": "L’objet restera avec le propriétaire après un décès prématuré.",
+
+    "enchantment.ensorcellation.tilling": "Labourer",
+    "enchantment.ensorcellation.tilling.desc": "Laboure des blocs supplémentaires dans un rayon.",
+
+    "enchantment.ensorcellation.trueshot": "Tir de précision",
+    "enchantment.ensorcellation.trueshot.desc": "Augmente la précision et la vitesse des flèches, et leur permet de percer.",
+
+    "enchantment.ensorcellation.vitality": "Vitalité",
+    "enchantment.ensorcellation.vitality.desc": "Augmente la santé maximale du porteur.",
+    "enchantment.ensorcellation.volley": "Salve",
+    "enchantment.ensorcellation.volley.desc": "Trois flèches sont tirées en arc de cercle. Une seule flèche est consommée.",
+
+    "enchantment.ensorcellation.vorpal": "Vorpal",
+    "enchantment.ensorcellation.vorpal.desc": "Effectue aléatoirement de puissantes attaques et décapitations.",
+
+    "enchantment.ensorcellation.weeding": "Sarclage",
+    "enchantment.ensorcellation.weeding.desc": "Dégage les plantes tout en labourant les blocs."
+}
