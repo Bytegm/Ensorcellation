@@ -39,15 +39,6 @@ public class SoulboundEvents {
             if (Utils.isFakePlayer(player) || player.level.getGameRules().getBoolean(RULE_KEEPINVENTORY)) {
                 return;
             }
-            //            Iterator<ItemEntity> iter = event.getDrops().iterator();
-            //            while (iter.hasNext()) {
-            //                ItemStack stack = iter.next().getItem();
-            //                if (getItemEnchantmentLevel(SOULBOUND.get(), stack) > 0) {
-            //                    if (addToPlayerInventory(player, stack)) {
-            //                        iter.remove();
-            //                    }
-            //                }
-            //            }
             List<ItemStack> soulbound = new ArrayList<>();
             Iterator<ItemEntity> iter = event.getDrops().iterator();
             while (iter.hasNext()) {
@@ -57,6 +48,10 @@ public class SoulboundEvents {
                     iter.remove();
                 }
             }
+            CompoundTag playerData = player.getPersistentData();
+            if (playerData.contains(Player.PERSISTED_NBT_TAG)) {
+                playerData.getCompound(Player.PERSISTED_NBT_TAG).remove(ID_ENSORCELLATION + ":" + ID_SOULBOUND);
+            }
             if (!soulbound.isEmpty()) {
                 ListTag list = new ListTag();
                 for (ItemStack item : soulbound) {
@@ -64,7 +59,6 @@ public class SoulboundEvents {
                         list.add(item.save(new CompoundTag()));
                     }
                 }
-                CompoundTag playerData = player.getPersistentData();
                 if (!playerData.contains(Player.PERSISTED_NBT_TAG)) {
                     playerData.put(Player.PERSISTED_NBT_TAG, new CompoundTag());
                 }
@@ -109,47 +103,8 @@ public class SoulboundEvents {
                     addToPlayerInventory(player, stack);
                 }
             }
+            persistedTag.remove(ID_ENSORCELLATION + ":" + ID_SOULBOUND);
         }
-        //        for (int i = 0; i < oldPlayer.inventory.armor.size(); ++i) {
-        //            ItemStack stack = oldPlayer.inventory.armor.get(i);
-        //            int encSoulbound = getItemEnchantmentLevel(soulbound, stack);
-        //            if (encSoulbound > 0) {
-        //                if (SoulboundEnchantment.permanent) {
-        //                    if (encSoulbound > 1) {
-        //                        removeEnchantment(stack, soulbound);
-        //                        addEnchantment(stack, soulbound, 1);
-        //                    }
-        //                } else if (player.level.random.nextInt(1 + encSoulbound) == 0) {
-        //                    removeEnchantment(stack, soulbound);
-        //                    if (encSoulbound > 1) {
-        //                        addEnchantment(stack, soulbound, encSoulbound - 1);
-        //                    }
-        //                }
-        //                if (addToPlayerInventory(player, stack)) {
-        //                    oldPlayer.inventory.armor.set(i, ItemStack.EMPTY);
-        //                }
-        //            }
-        //        }
-        //        for (int i = 0; i < oldPlayer.inventory.items.size(); ++i) {
-        //            ItemStack stack = oldPlayer.inventory.items.get(i);
-        //            int encSoulbound = getItemEnchantmentLevel(soulbound, stack);
-        //            if (encSoulbound > 0) {
-        //                if (SoulboundEnchantment.permanent) {
-        //                    if (encSoulbound > 1) {
-        //                        removeEnchantment(stack, soulbound);
-        //                        addEnchantment(stack, soulbound, 1);
-        //                    }
-        //                } else if (player.level.random.nextInt(1 + encSoulbound) == 0) {
-        //                    removeEnchantment(stack, soulbound);
-        //                    if (encSoulbound > 1) {
-        //                        addEnchantment(stack, soulbound, encSoulbound - 1);
-        //                    }
-        //                }
-        //                if (addToPlayerInventory(player, stack)) {
-        //                    oldPlayer.inventory.items.set(i, ItemStack.EMPTY);
-        //                }
-        //            }
-        //        }
     }
 
 }
