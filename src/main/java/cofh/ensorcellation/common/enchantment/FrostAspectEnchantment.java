@@ -12,6 +12,7 @@ import net.minecraft.world.entity.monster.Blaze;
 import net.minecraft.world.entity.monster.MagmaCube;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.item.enchantment.FireAspectEnchantment;
 
 import static cofh.core.init.CoreMobEffects.CHILLED;
 import static cofh.core.init.CoreParticles.FROST;
@@ -39,7 +40,7 @@ public class FrostAspectEnchantment extends EnchantmentCoFH {
     @Override
     public boolean checkCompatibility(Enchantment ench) {
 
-        return super.checkCompatibility(ench) && ench != Enchantments.FIRE_ASPECT;
+        return super.checkCompatibility(ench) && !(ench instanceof FireAspectEnchantment);
     }
 
     // region HELPERS
