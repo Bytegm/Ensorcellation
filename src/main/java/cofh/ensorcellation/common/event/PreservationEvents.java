@@ -6,12 +6,12 @@
 //import net.minecraft.world.entity.ExperienceOrb;
 //import net.minecraft.world.entity.player.Player;
 //import net.minecraft.world.item.ItemStack;
-//import net.minecraftforge.event.AnvilUpdateEvent;
-//import net.minecraftforge.event.entity.player.AnvilRepairEvent;
-//import net.minecraftforge.event.entity.player.PlayerXpEvent;
-//import net.minecraftforge.eventbus.api.EventPriority;
-//import net.minecraftforge.eventbus.api.SubscribeEvent;
-//import net.minecraftforge.fml.common.Mod;
+//import net.neoforged.neoforge.event.AnvilUpdateEvent;
+//import net.neoforged.neoforge.event.entity.player.AnvilRepairEvent;
+//import net.neoforged.neoforge.event.entity.player.PlayerXpEvent;
+//import net.neoforged.bus.api.EventPriority;
+//import net.neoforged.bus.api.SubscribeEvent;
+//import net.neoforged.fml.common.Mod;
 //
 //import static cofh.lib.util.Utils.getItemEnchantmentLevel;
 //import static cofh.lib.util.constants.ModIds.ID_ENSORCELLATION;

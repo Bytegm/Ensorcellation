@@ -8,7 +8,7 @@
 //import net.minecraft.item.ItemStack;
 //import net.minecraft.world.World;
 //import net.minecraft.world.entity.EquipmentSlot;
-//import net.minecraftforge.common.ToolType;
+//import net.neoforged.neoforge.common.ToolType;
 //
 //public class SmashingEnchantment extends EnchantmentCoFH {
 //

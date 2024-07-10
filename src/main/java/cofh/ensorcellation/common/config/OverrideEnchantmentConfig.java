@@ -1,7 +1,7 @@
 package cofh.ensorcellation.common.config;
 
 import cofh.core.common.config.IBaseConfig;
-import net.minecraftforge.common.ForgeConfigSpec;
+import net.neoforged.neoforge.common.ModConfigSpec;
 
 import java.util.function.Supplier;
 
@@ -12,7 +12,7 @@ import static net.minecraft.world.item.enchantment.Enchantments.*;
 public class OverrideEnchantmentConfig implements IBaseConfig {
 
     @Override
-    public void apply(ForgeConfigSpec.Builder builder) {
+    public void apply(ModConfigSpec.Builder builder) {
 
         String treasure = "This sets whether or not the Enchantment is considered a 'treasure' enchantment.";
         String level = "This option adjusts the maximum allowable level for the Enchantment.";

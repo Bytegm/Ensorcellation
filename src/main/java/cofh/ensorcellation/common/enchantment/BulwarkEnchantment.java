@@ -4,7 +4,7 @@ import cofh.lib.common.enchantment.EnchantmentCoFH;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
-import net.minecraftforge.common.ToolActions;
+import net.neoforged.neoforge.common.ToolActions;
 
 public class BulwarkEnchantment extends EnchantmentCoFH {
 

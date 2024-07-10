@@ -4,7 +4,7 @@ import cofh.ensorcellation.common.enchantment.*;
 import cofh.ensorcellation.common.enchantment.curse.CurseFoolEnchant;
 import cofh.ensorcellation.common.enchantment.curse.CurseMercyEnchantment;
 import cofh.lib.common.enchantment.EnchantmentCoFH;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.registries.RegistryObject;
 
 import static cofh.core.util.references.EnsorcIDs.*;
 import static cofh.ensorcellation.Ensorcellation.ENCHANTMENTS;

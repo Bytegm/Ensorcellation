@@ -4,11 +4,11 @@ import cofh.ensorcellation.common.enchantment.PhalanxEnchantment;
 import cofh.lib.util.helpers.MathHelper;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.ComputeFovModifierEvent;
-import net.minecraftforge.common.ToolActions;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.neoforge.client.event.ComputeFovModifierEvent;
+import net.neoforged.neoforge.common.ToolActions;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.Mod;
 
 import static cofh.ensorcellation.init.registries.ModEnchantments.PHALANX;
 import static cofh.lib.util.Utils.getItemEnchantmentLevel;
