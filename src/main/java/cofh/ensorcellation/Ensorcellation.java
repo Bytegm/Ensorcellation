@@ -6,17 +6,16 @@ import cofh.ensorcellation.common.config.BaseEnchantmentConfig;
 import cofh.ensorcellation.common.config.OverrideEnchantmentConfig;
 import cofh.ensorcellation.init.registries.ModEnchantments;
 import cofh.lib.util.DeferredRegisterCoFH;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
-import net.neoforged.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.neoforged.neoforge.registries.ForgeRegistries;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import static cofh.lib.util.constants.ModIds.ID_ENSORCELLATION;
-import static cofh.lib.util.constants.ModIds.ID_MINECRAFT;
 
 @Mod (ID_ENSORCELLATION)
 public class Ensorcellation {
@@ -24,17 +23,13 @@ public class Ensorcellation {
     public static final Logger LOG = LogManager.getLogger(ID_ENSORCELLATION);
     public static final ConfigManager CONFIG_MANAGER = new ConfigManager();
 
-    public static final DeferredRegisterCoFH<Enchantment> ENCHANTMENTS = DeferredRegisterCoFH.create(ForgeRegistries.ENCHANTMENTS, ID_ENSORCELLATION);
-    public static final DeferredRegisterCoFH<Enchantment> OVERRIDES = DeferredRegisterCoFH.create(ForgeRegistries.ENCHANTMENTS, ID_MINECRAFT);
+    public static final DeferredRegisterCoFH<Enchantment> ENCHANTMENTS = DeferredRegisterCoFH.create(BuiltInRegistries.ENCHANTMENT, ID_ENSORCELLATION);
 
-    public Ensorcellation() {
-
-        final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public Ensorcellation(ModContainer modContainer, IEventBus modEventBus) {
 
         modEventBus.addListener(this::clientSetup);
 
         ENCHANTMENTS.register(modEventBus);
-        OVERRIDES.register(modEventBus);
 
         CONFIG_MANAGER.register(modEventBus)
                 .addServerConfig(new BaseEnchantmentConfig())

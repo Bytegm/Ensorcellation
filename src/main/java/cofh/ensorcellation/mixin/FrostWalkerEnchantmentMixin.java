@@ -18,7 +18,7 @@ import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.neoforged.neoforge.common.util.BlockSnapshot;
-import net.neoforged.neoforge.event.ForgeEventFactory;
+import net.neoforged.neoforge.event.EventHooks;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -65,7 +65,7 @@ public abstract class FrostWalkerEnchantmentMixin extends Enchantment {
                     if (blockstate1.isAir()) {
                         BlockState blockstate2 = pLevel.getBlockState(blockpos);
                         boolean isFull = blockstate2.getBlock() == Blocks.LAVA && blockstate2.getValue(LiquidBlock.LEVEL) == 0;
-                        if (isFull && state.canSurvive(pLevel, blockpos) && pLevel.isUnobstructed(state, blockpos, CollisionContext.empty()) && !ForgeEventFactory.onBlockPlace(pLiving, BlockSnapshot.create(pLevel.dimension(), pLevel, blockpos), Direction.UP)) {
+                        if (isFull && state.canSurvive(pLevel, blockpos) && pLevel.isUnobstructed(state, blockpos, CollisionContext.empty()) && !EventHooks.onBlockPlace(pLiving, BlockSnapshot.create(pLevel.dimension(), pLevel, blockpos), Direction.UP)) {
                             pLevel.setBlockAndUpdate(blockpos, state);
                             pLevel.scheduleTick(blockpos, GLOSSED_MAGMA.get(), MathHelper.nextInt(pLiving.getRandom(), 60, 120));
                         }

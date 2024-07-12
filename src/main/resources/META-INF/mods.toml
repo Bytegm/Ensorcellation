@@ -21,21 +21,21 @@ Suitable for both lightly and heavily modded worlds.
 '''
 [[dependencies.ensorcellation]]
 modId = "minecraft"
-mandatory = true
-versionRange = "1.20.1"
+type = "required"
+versionRange = "1.20.4"
 ordering = "AFTER"
 side = "BOTH"
 
 [[dependencies.ensorcellation]]
-modId = "forge"
-mandatory = true
+modId = "neoforge"
+type = "required"
 versionRange = "[${neo_version},)"
 ordering = "AFTER"
 side = "BOTH"
 
 [[dependencies.ensorcellation]]
 modId = "cofh_core"
-mandatory = true
+required = true
 versionRange = "${cofh_core_version_range}"
 ordering = "AFTER"
 side = "BOTH"

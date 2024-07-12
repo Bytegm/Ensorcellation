@@ -34,7 +34,10 @@ import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
-import net.neoforged.neoforge.common.ForgeMod;
+import net.neoforged.bus.api.EventPriority;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.common.NeoForgeMod;
 import net.neoforged.neoforge.common.util.FakePlayer;
 import net.neoforged.neoforge.event.TickEvent;
 import net.neoforged.neoforge.event.entity.living.*;
@@ -43,9 +46,6 @@ import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerXpEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
-import net.neoforged.bus.api.EventPriority;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.Mod;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -214,7 +214,7 @@ public class CommonEvents {
 
         // REACH
         int encReach = getMaxEquippedEnchantmentLevel(entity, REACH.get());
-        AttributeInstance reachAttr = entity.getAttribute(ForgeMod.BLOCK_REACH.get());
+        AttributeInstance reachAttr = entity.getAttribute(NeoForgeMod.BLOCK_REACH.value());
         if (reachAttr != null) {
             reachAttr.removeModifier(UUID_ENCH_REACH_DISTANCE);
             if (encReach > 0) {
@@ -410,14 +410,31 @@ public class CommonEvents {
 
     // region PLAYER INTERACTION
     @SubscribeEvent
-    public static void handlePlayerRightClickEvent(PlayerInteractEvent event) {
+    public static void handlePlayerRightClickEvent(PlayerInteractEvent.RightClickBlock event) {
 
         if (event.isCanceled()) {
             return;
         }
-        if (!(event instanceof PlayerInteractEvent.RightClickItem || event instanceof PlayerInteractEvent.RightClickBlock || event instanceof PlayerInteractEvent.RightClickEmpty)) {
+        handlePlayerRightClickEventInner(event);
+    }
+
+    @SubscribeEvent
+    public static void handlePlayerRightClickEvent(PlayerInteractEvent.RightClickItem event) {
+
+        if (event.isCanceled()) {
             return;
         }
+        handlePlayerRightClickEventInner(event);
+    }
+
+    @SubscribeEvent
+    public static void handlePlayerRightClickEvent(PlayerInteractEvent.RightClickEmpty event) {
+
+        handlePlayerRightClickEventInner(event);
+    }
+
+    private static void handlePlayerRightClickEventInner(PlayerInteractEvent event) {
+
         Player player = event.getEntity();
         if (player.fishing == null || Utils.isClientWorld(player.level)) {
             return;
@@ -436,7 +453,7 @@ public class CommonEvents {
                 return;
             }
             ItemEntity armorEntity = new ItemEntity(living.level, living.getX(), living.getY() + 0.5D, living.getZ(), armor);
-            armorEntity.setThrower(player.getUUID());
+            armorEntity.setThrower(player);
             armorEntity.setPickUpDelay(5);
             armorEntity.level.addFreshEntity(armorEntity);
             armorEntity.setPos(player.getX(), player.getY(), player.getZ());
